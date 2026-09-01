@@ -1,16 +1,10 @@
 resource_group_name = "rg-subnets-example"
 location            = "uksouth"
-vnet_name           = "vnet-example"
-vnet_address_space  = ["10.0.0.0/16"]
 
-subnets = {
-  "snet-app" = {
-    address_prefixes = ["10.0.1.0/24"]
-  }
-  "snet-data" = {
-    address_prefixes = ["10.0.2.0/24"]
-  }
-}
+# vnets/subnets are defined in network.json (see network.json.example),
+# not here. Set network_definitions_file below to point at your file if
+# it's not named network.json.
+# network_definitions_file = "network.json"
 
 tags = {
   environment = "dev"

@@ -1,5 +1,5 @@
 variable "resource_group_name" {
-  description = "Name of the resource group to create/use for the virtual network and subnets."
+  description = "Name of the resource group to create/use for the virtual networks and subnets."
   type        = string
 }
 
@@ -9,21 +9,10 @@ variable "location" {
   default     = "uksouth"
 }
 
-variable "vnet_name" {
-  description = "Name of the virtual network."
+variable "network_definitions_file" {
+  description = "Path to the JSON file (relative to this module) listing vnets/subnets to create. One row per subnet: vnet_name, vnet_address_space, subnet_name, address_prefix."
   type        = string
-}
-
-variable "vnet_address_space" {
-  description = "Address space for the virtual network."
-  type        = list(string)
-}
-
-variable "subnets" {
-  description = "Map of subnets to create within the virtual network."
-  type = map(object({
-    address_prefixes = list(string)
-  }))
+  default     = "network.json"
 }
 
 variable "tags" {
