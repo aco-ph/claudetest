@@ -1,0 +1,19 @@
+{
+  "resource_group_name": "",
+  "location": "uksouth",
+  "vnet_name": "",
+  "vnet_address_space": [
+    ""
+  ],
+  "subnets": {
+    "": {
+      "address_prefixes": [
+        ""
+      ]
+    }
+  },
+  "tags": {
+    "environment": "",
+    "project": "terraform-subnets"
+  }
+}
